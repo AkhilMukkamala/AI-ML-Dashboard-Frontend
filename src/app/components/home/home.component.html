@@ -1,0 +1,29 @@
+<p-table  [value]="missedDialogues" [paginator]="true" [rows]="5" sortMode="multiple">
+  <ng-template pTemplate="header" let-columns>
+    <tr>
+      <th [ngClass]="'table-col-xxs'">No</th>
+      <th [ngClass]="'table-col-lg'">Dialogues</th>
+      <th [ngClass]="'table-col-xs'">Current Intent</th>
+      <th [ngClass]="'table-col-xs'">Choose Intent</th>
+      <!-- <th *ngFor="let col of columns"  [pSortableColumn]="col.field">
+        {{col.header}}
+        <p-sortIcon [field]="col.field"></p-sortIcon>
+      </th>
+      <th>Actions</th> -->
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-missedDialogue let-i="rowIndex">
+    <tr>
+      <td>{{i + 1}}</td>
+      <td></td>
+      <td></td>
+      <td>
+        <tag-input [ngModel]='items' [maxItems]='1' [onlyFromAutocomplete]="true" theme='dark'>
+          <tag-input-dropdown [showDropdownIfEmpty]="true" [autocompleteItems]="items">
+          </tag-input-dropdown>
+        </tag-input>
+      </td>
+    </tr>
+  </ng-template>
+</p-table>
+<!-- //[ngClass]="'tag-input'" -->

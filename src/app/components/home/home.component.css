@@ -1,0 +1,30 @@
+/* td,th {
+    text-align: center;
+} */
+
+.table-col-xxs {
+    width: 30px;
+}
+
+
+.table-col-xs {
+    width: 70px;
+}
+
+.table-col-sm {
+    width: 130px;
+}
+
+.table-col-md {
+    width: 180px;
+}
+
+.table-col-lg {
+    width: 230px;
+}
+.ng-tns-c2-0.ng2-tag-input.dark,.ng-tns-c2-2.ng2-tag-input.dark{
+    height: 45px;
+}
+.ng-tns-c2-0.ng-trigger.ng-trigger-animation.ng-star-inserted {
+    border-radius: 30px !important;
+}

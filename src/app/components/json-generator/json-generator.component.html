@@ -1,0 +1,39 @@
+<div class="row">
+  <div class="col-xs-12 col-sm-10 col-md-8">
+    <h3>Voice Bot JSON Configurator</h3>
+    <form (ngSubmit)="onSubmit()" #f="ngForm">
+      <div ngModelGroup="intentData" #intentData="ngModelGroup">
+        <div class="form-group">
+          <label for="IntentName">Intent Name</label>
+          <input type="text" id="IntentName" class="form-control" ngModel name="IntentName" required>
+        </div>
+      </div>
+      <div ngModelGroup="sentenceData" #sentenceData="ngModelGroup">
+        <div class="form-group">
+          <label for="Sentences">Sentences</label>
+          <input type="text" id="Sentences" class="form-control" ngModel name="Sentences" required>
+        </div>
+      </div>
+      <div ngModelGroup="standardVoiceData" #standardVoiceData="ngModelGroup">
+        <div class="form-group">
+          <label for="StandardVoice">Standard Voice</label>
+          <input type="text" id="StandardVoice" class="form-control" ngModel name="StandardVoice" required>
+        </div>
+      </div>
+      <div ngModelGroup="standardTextData" #standardTextData="ngModelGroup">
+        <div class="form-group">
+          <label for="StandardText">Standard Text</label>
+          <input type="text" id="StandardText" class="form-control" ngModel name="StandardText" required>
+        </div>
+      </div>
+      <div ngModelGroup="actionTypeData" #actionTypeData="ngModelGroup">
+        <div class="form-group">
+          <label for="ActionType"> Action Type</label>
+          <input type="text" id="ActionType" class="form-control" ngModel name="ActionType" required>
+        </div>
+      </div>
+      <button class="btn btn-success" type="submit" [disabled]="!f.valid">Build</button>
+    </form>
+    <button class="btn btn-info" (click)="onPreviewClick()" [disabled]="!f.valid">Preview</button>
+  </div>
+</div>

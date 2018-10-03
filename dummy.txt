@@ -1,0 +1,106 @@
+<div class="container">
+    <header class="bp-header cf">
+        <div class="dummy-logo">
+            <div class="dummy-icon foodicon foodicon--coconut"></div>
+            <h2 class="dummy-heading">ServiceNext</h2>
+        </div>
+    </header>
+    <button class="action action--open" aria-label="Open Menu"><span class="icon icon--menu"></span></button>
+    <nav id="ml-menu" class="menu">
+        <button class="action action--close" aria-label="Close Menu"><span class="icon icon--cross"></span></button>
+        <div class="menu__wrap">
+            <ul data-menu="main" class="menu__level">
+                <li class="menu__item"><a class="menu__link" data-submenu="submenu-1" href="#">Vegetables</a></li>
+                <li class="menu__item"><a class="menu__link" data-submenu="submenu-2" href="#">Fruits</a></li>
+                <li class="menu__item"><a class="menu__link" data-submenu="submenu-3" href="#">Grains</a></li>
+                <li class="menu__item"><a class="menu__link" data-submenu="submenu-4" href="#">Mylk &amp; Drinks</a></li>
+            </ul>
+            <ul data-menu="submenu-1" class="menu__level">
+                <li class="menu__item"><a class="menu__link" href="#">Stalk Vegetables</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Roots &amp; Seeds</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Cabbages</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Salad Greens</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Mushrooms</a></li>
+                <li class="menu__item"><a class="menu__link" data-submenu="submenu-1-1" href="#">Sale %</a></li>
+            </ul>
+
+            <ul data-menu="submenu-1-1" class="menu__level">
+                <li class="menu__item"><a class="menu__link" href="#">Fair Trade Roots</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Dried Veggies</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Our Brand</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Homemade</a></li>
+            </ul>
+
+            <ul data-menu="submenu-2" class="menu__level">
+                <li class="menu__item"><a class="menu__link" href="#">Citrus Fruits</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Berries</a></li>
+                <li class="menu__item"><a class="menu__link" data-submenu="submenu-2-1" href="#">Special Selection</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Tropical Fruits</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Melons</a></li>
+            </ul>
+            <!-- Submenu 2-1 -->
+            <ul data-menu="submenu-2-1" class="menu__level">
+                <li class="menu__item"><a class="menu__link" href="#">Exotic Mixes</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Wild Pick</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Vitamin Boosters</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="content">
+        <!-- <p class="info">Please choose a category</p> -->
+  <router-outlet></router-outlet>
+    </div>
+</div>
+
+<script>
+(function() {
+  var menuEl = document.getElementById('ml-menu'),
+    mlmenu = new MLMenu(menuEl, {
+      // breadcrumbsCtrl : true, // show breadcrumbs
+      // initialBreadcrumb : 'all', // initial breadcrumb text
+      backCtrl : false, // show back button
+      // itemsDelayInterval : 60, // delay between each menu item sliding animation
+    });
+
+  // mobile menu toggle
+  var openMenuCtrl = document.querySelector('.action--open'),
+    closeMenuCtrl = document.querySelector('.action--close');
+
+  openMenuCtrl.addEventListener('click', openMenu);
+  closeMenuCtrl.addEventListener('click', closeMenu);
+
+  function openMenu() {
+    classie.add(menuEl, 'menu--open');
+  }
+
+  function closeMenu() {
+    classie.remove(menuEl, 'menu--open');
+  }
+})()
+  // simulate grid content loading
+  var gridWrapper = document.querySelector('.content');
+</script>
+
+
+
+<!-- <ng2-slim-loading-bar color="red"></ng2-slim-loading-bar>
+<nav class="navbar navbar-expand-sm bg-light">
+<div class="container-fluid">
+<ul class="navbar-nav">
+  <li class="nav-item">
+    <a routerLink="home" class="nav-link" routerLinkActive="active">
+      Home
+    </a>
+  </li>
+  <li class="nav-item">
+    <a routerLink="intent-analyser" class="nav-link" routerLinkActive="active">
+      Intent Analyser
+    </a>
+  </li>
+</ul>
+</div>
+</nav>
+<div class="row">
+<div class="container">
+</div>
+</div> -->

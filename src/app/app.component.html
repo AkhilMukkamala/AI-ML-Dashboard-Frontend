@@ -1,0 +1,33 @@
+<ng2-slim-loading-bar color="red"></ng2-slim-loading-bar>
+<nav class="navbar navbar-inverse navbar-expand-lg bg-dark" role="navigation-demo">
+  <div class="container">
+    <div class="navbar-translate">
+      <a class="navbar-brand" [routerLink]="['/home']" routerLinkActive="active">ServiceNext</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ml-auto  nav-for-margin">
+        <li class="nav-item">
+          <a [routerLink]="['/json']" class="nav-link" routerLinkActive="active">
+            JSON Generator
+          </a>
+        </li>
+        <li class="nav-item">
+            <a [routerLink]="['/training']" class="nav-link" routerLinkActive="active">
+              Intent Training
+            </a>
+          </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="row">
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+</div>

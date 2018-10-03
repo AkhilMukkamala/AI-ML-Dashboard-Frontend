@@ -1,0 +1,41 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* @import "~bootstrap/dist/css/bootstrap.min.css"; */
+
+/* @import "~font-awesome/css/font-awesome.css"; */
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import '~ngx-toastr/toastr.css';
+
+/* deeppurple-amber.css
+indigo-pink.css
+pink-bluegrey.css
+purple-green.css */
+
+/* */
+
+.row, img {
+  max-width: 100%;
+}
+
+table {
+  width: 100%;
+}
+
+.example-container {
+  height: 400px;
+  overflow: auto;
+}
+
+.multi-select-for-intents {
+  float: right;
+}
+.table-for-intents{
+  margin-top: 50px !important;
+}
+.for-button-margin-top{
+  margin-top: 20px;
+}
+.intent-lowercase{
+  text-transform: lowercase;
+}

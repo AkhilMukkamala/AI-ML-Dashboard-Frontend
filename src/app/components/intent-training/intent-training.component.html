@@ -1,0 +1,117 @@
+<div id="navigation-pills">
+  <div class="title">
+    <!-- <h3>Add Intents/Sentences</h3> -->
+  </div>
+  <!-- <div class="title">
+      <h3>
+        <small>With Icons</small>
+      </h3>
+    </div> -->
+  <div class="row">
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-md-2">
+          <ul class="nav nav-pills nav-pills-icons flex-column" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active show" href="#addintents" role="tab" data-toggle="tab" aria-selected="true">
+                <i class="material-icons">add_to_queue</i> ADD INTENTS
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#intents" role="tab" data-toggle="tab" aria-selected="false">
+                <i class="material-icons">playlist_add_check</i> GET INTENTS
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#onlyintents" role="tab" data-toggle="tab" aria-selected="false">
+                <i class="material-icons">list</i> GET ONLY INTENTS
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#deleteintents" role="tab" data-toggle="tab" aria-selected="false">
+                <i class="material-icons">delete</i> DELETE INTENTS
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-10">
+          <div class="tab-content">
+            <div class="tab-pane active show" id="addintents">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label for="Intent" class="bmd-label-floating">Intent Name</label>
+                    <input type="text" #intentName class="form-control intent-lowercase" id="Intent">
+                    <span class="bmd-help">Please Enter Intent Name in Lower Case</span>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label for="Sentence" class="bmd-label-floating">Sentence</label>
+                    <input type="text" #sentence class="form-control" id="Sentence">
+                    <span class="bmd-help">Please Enter Sentence to be Added</span>
+                  </div>
+                </div>
+                <div class="col-md-2 for-button-margin-top">
+                  <button class="btn btn-success" (click)="addSentenceToIntent(intentName.value, sentence.value)">Add<div
+                      class="ripple-container"></div></button>
+                </div>
+                <div class="col-md-2 for-button-margin-top">
+                  <button class="btn btn-danger" (click)="clearFields()">Clear<div class="ripple-container"></div></button>
+                </div>
+              </div>
+
+              <br />
+              <br>Enter your Intent Name and Sentence and Click on Add to Add a Particular Sentence to the Specified
+              Intent.
+              Click on clear to reset the fields.
+
+              <br />w
+              <br>
+              Note: <h5> Please Add all Intent Names in LowerCase, If there are two Words in a Intent, Separate them by
+                a Dash.</h5>
+              Example: lockout-issue
+            </div>
+            <div class="tab-pane" id="onlyintents">
+              <h1 class="lead"> List of Intents</h1>
+              <ul>
+                <li *ngFor="let intent of allIntents"> {{ intent.intentName }}</li>
+              </ul>
+            </div>
+            <div class="tab-pane" id="intents">
+              <app-intent-analyser></app-intent-analyser>
+            </div>
+
+            <div class="tab-pane" id="deleteintents">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label for="dIntent" class="bmd-label-floating">Intent Name</label>
+                    <input type="text" #dintentName class="form-control intent-lowercase" id="dIntent">
+                    <span class="bmd-help">Please Enter Intent Name in Lower Case</span>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label for="dSentence" class="bmd-label-floating">Sentence</label>
+                    <input type="text" #dsentence class="form-control" id="dSentence">
+                    <span class="bmd-help">Please Enter Sentence to be Deleted</span>
+                  </div>
+                </div>
+                <div class="col-md-2 for-button-margin-top">
+                  <button class="btn btn-success" (click)="deleteSentence(dintentName.value, dsentence.value)">Delete<div
+                      class="ripple-container"></div></button>
+                </div>
+                <div class="col-md-2 for-button-margin-top">
+                  <button class="btn btn-danger" (click)="clearFields()">Clear<div class="ripple-container"></div></button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
