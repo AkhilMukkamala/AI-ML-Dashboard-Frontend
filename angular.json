@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "intentDashboard": {
+    "AIMLDashboard": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/intentDashboard",
+            "outputPath": "dist/AIMLDashboard",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -51,18 +51,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "intentDashboard:build"
+            "browserTarget": "AIMLDashboard:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "intentDashboard:build:production"
+              "browserTarget": "AIMLDashboard:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "intentDashboard:build"
+            "browserTarget": "AIMLDashboard:build"
           }
         },
         "test": {
@@ -97,7 +97,7 @@
         }
       }
     },
-    "intentDashboard-e2e": {
+    "AIMLDashboard-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -105,11 +105,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "intentDashboard:serve"
+            "devServerTarget": "AIMLDashboard:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "intentDashboard:serve:production"
+              "devServerTarget": "AIMLDashboard:serve:production"
             }
           }
         },
@@ -125,5 +125,5 @@
       }
     }
   },
-  "defaultProject": "intentDashboard"
+  "defaultProject": "AIMLDashboard"
 }

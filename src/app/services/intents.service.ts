@@ -13,13 +13,10 @@ import { TrainingModel } from '../models/training.model';
 })
 export class IntentsService {
 
-  private apiUrl = 'http://127.0.0.1:5507';
+  private apiUrl = 'https://ai-ml-dashboard-backend.herokuapp.com';
 
   constructor( private http: HttpClient) { }
 
-  // getAllIntents(): Observable<TrainingModel[]> {
-  //   return this.http.get<TrainingModel[]>(this.apiUrl + '/getIntents');
-  // }
     getAllIntentsWithSentences(): Observable<TrainingModel[]>  {
     return this.http.get<TrainingModel[]>(this.apiUrl + '/getAll');
   }
