@@ -41,7 +41,7 @@ import { JsonGeneratorComponent } from './components/json-generator/json-generat
 // Routes
 
 const routes: Routes = [
-  { path: '', redirectTo: 'IntentTrainingComponent', pathMatch: 'full' },
+  { path: '', redirectTo: 'training', pathMatch: 'full' },
   {
     path: 'training',
     component: IntentTrainingComponent

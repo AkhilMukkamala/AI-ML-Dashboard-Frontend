@@ -13,7 +13,7 @@ import { TrainingModel } from '../models/training.model';
 })
 export class IntentsService {
 
-  private apiUrl = 'https://ai-ml-dashboard-backend.herokuapp.com';
+  private apiUrl = 'https://snx-ml-dashboard-backend.herokuapp.com';
 
   constructor( private http: HttpClient) { }
 
